@@ -3,6 +3,9 @@ run-name: ${{ github.actor }} is creating blog posts on Github pages
 on: [push]
 jobs:
   Building-blogs:
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
     runs-on: ubuntu-latest
     steps:
       - name: Install woolf
