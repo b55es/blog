@@ -33,7 +33,7 @@ jobs:
         uses: actions/configure-pages@v4
         
       - name: Install woolf
-        run: npm install --global @b55es/woolf@1.0.0
+        run: npm install --global @b55es/woolf@1.0.1
         
       - name: Check out repository code
         id: checkout_code
