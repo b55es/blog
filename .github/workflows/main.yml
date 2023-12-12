@@ -33,7 +33,7 @@ jobs:
         uses: actions/configure-pages@v4
         
       - name: Install woolf
-        run: npm install --global @b55es/woolf@1.0.1
+        run: npm install --global @b55es/woolf@1.1.0
         
       - name: Check out repository code
         id: checkout_code
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build blog posts
         id: build_blog
-        run: woolf build --path .
+        run: woolf build --path . --baseUrl https://b55es.github.io/blog/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
