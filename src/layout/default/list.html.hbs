@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ path }}</title>
+</head>
+<body>
+    <h1>{{ path }}</h1>
+    <ul>
+        {{#each files}}
+        {{#if isDirectory}}
+        <li><a href="{{ ../path }}/{{ name }}">{{ name }}/</a></li>
+        {{/if}}
+        {{/each}}
+    </ul>
+    <ul>
+        {{#each files}}
+        {{#unless isDirectory}}
+        <li><a href="{{ ../path }}/{{ name }}">{{ name }}</a></li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</body>
+</html>
