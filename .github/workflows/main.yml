@@ -41,7 +41,7 @@ jobs:
 
       - name: Build blog posts
         id: build_blog
-        run: woolf build --path . --baseUrl https://b55es.github.io/blog/
+        run: woolf build --path . --baseUrl https://${{github.repository_owner}}.github.io/${{github.repository}}/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
